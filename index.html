@@ -1,21 +1,28 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Python</title>
+  <title>Python Interactive Course</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
   <script src="https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js"></script>
 </head>
 <body>
 
   <div class="screen" id="heroScreen">
-    <img src="images/Group 2.png" alt="Blue Snake" class="snake snake-blue" id="blueSnake">
-    <img src="images/Group 1.png" alt="Yellow Snake" class="snake snake-yellow" id="yellowSnake">
-    <img src="images/Group 3.png" alt="Combined Snake" class="snake snake-combined" id="combinedSnake">
+    <header class="top-header" id="topHeader">
+      <nav class="top-nav">
+        <a href="#" id="navHome" class="nav-link active">Home</a>
+        <a href="#" id="navAbout" class="nav-link">About us</a>
+      </nav>
+    </header>
+
+    <img src="images/blueone.png" alt="Blue Snake" class="snake snake-blue" id="blueSnake">
+    <img src="images/yellowone.png" alt="Yellow Snake" class="snake snake-yellow" id="yellowSnake">
+    <img src="images/bothofthem.png" alt="Combined Snake" class="snake snake-combined" id="combinedSnake">
 
     <div class="content-box" id="contentBox">
       <div class="welcome">Welcome!</div>
@@ -25,30 +32,101 @@
       <button class="btn-start" id="actionBtn">START</button>
     </div>
 
-    <!-- МЕСТО ДЛЯ ТВОИХ НАДПИСЕЙ ПОСЛЕ УЛЁТА ЗМЕИ В УГОЛ -->
-    <div class="final-text-block" id="finalTextBlock">
-      Ut enim ad minima veniam, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, nisi ut aliquid ex ea commodi consequatur. Ut enim ad minima veniam, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat! Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, consectetur adipiscing elit, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <div class="course-container" id="courseContainer">
+      <aside class="course-sidebar">
+        <div class="sidebar-header">
+          <h2>Python Course</h2>
+          <span class="course-subtitle">9 Interactive Lessons</span>
+        </div>
+        <ul class="lesson-list" id="lessonList">
+        </ul>
+      </aside>
 
-Sed ut perspiciatis, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      <main class="course-main">
+        <div class="lesson-header-nav">
+          <div class="nav-arrows">
+            <button class="nav-arrow-btn" id="prevBtn" title="Previous Lesson">&#8249;</button>
+            <span id="lessonProgress">Lesson 1 of 9</span>
+            <button class="nav-arrow-btn" id="nextBtn" title="Next Lesson">&#8250;</button>
+          </div>
+        </div>
 
-Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, sunt in culpa qui officia deserunt mollit anim id est laborum. Quis autem vel eum iure reprehenderit, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, sunt in culpa qui officia deserunt mollit anim id est laborum. At vero eos et accusamus et iusto odio dignissimos ducimus, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate, nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem!
+        <h2 id="lessonTitle" class="lesson-title">Lesson 1</h2>
 
-Ut enim ad minima veniam, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo? Quis autem vel eum iure reprehenderit, quis nostrum exercitationem ullam corporis suscipit laboriosam, obcaecati cupiditate non provident, similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Lorem ipsum dolor sit amet, quis nostrum exercitationem ullam corporis suscipit laboriosam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, obcaecati cupiditate non provident, similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Excepteur sint occaecat cupidatat non proident, quia voluptas...
+        <div class="video-wrapper">
+          <iframe id="videoPlayer" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="lesson-description" id="lessonDescription"></div>
+
+        <div class="quiz-section">
+          <h3 class="quiz-section-title">📝 Practice & Knowledge Check</h3>
+          <div id="quizContainer" class="quiz-container">
+          </div>
+        </div>
+
+        <div class="lesson-footer">
+          <button class="btn-next-lesson" id="nextLessonFooterBtn">Up next: Lesson 2 &rsaquo;</button>
+        </div>
+      </main>
+    </div>
+
+    <div class="about-container" id="aboutContainer" style="display: none;">
+      <div class="about-card">
+        <h1 class="about-title">About Python Course</h1>
+        <p class="about-description">
+          Welcome to our interactive Python learning platform! Our mission is to make learning programming simple, visual, and effective for everyone.
+        </p>
+
+        <div class="about-grid">
+          <div class="about-feature">
+            <div class="feature-icon">📚</div>
+            <h3>9 Interactive Lessons</h3>
+            <p>From basics & strings to object concepts, modules and mini projects with integrated knowledge checks.</p>
+          </div>
+
+          <div class="about-feature">
+            <div class="feature-icon">⚡</div>
+            <h3>Browser IDE (Pyodide)</h3>
+            <p>Write, run, and debug Python code directly inside your browser without any setup required.</p>
+          </div>
+
+          <div class="about-feature">
+            <div class="feature-icon">🎯</div>
+            <h3>Hands-on Practice</h3>
+            <p>Test your knowledge with multiple-choice quizzes and load exercise code straight into the editor.</p>
+          </div>
+        </div>
+
+        <div class="about-footer-info">
+          <p>Start your Python coding journey today!</p>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="container" id="editorContainer">
-    <div class="editor">
-      <textarea id="code">print("Hello, World!") 
-      </textarea>
+  <div class="ide-container" id="editorContainer">
+    <div class="ide-header">
+      <span class="ide-title">Python 3.11 Interactive Console & Editor</span>
+      <div class="ide-controls">
+        <span>&#8722;</span>
+        <span>&#9633;</span>
+        <span>&#10005;</span>
+      </div>
     </div>
+    
+    <div class="ide-body">
+      <div class="editor">
+        <textarea id="code" spellcheck="false">print("Hello, Python!")</textarea>
+      </div>
 
-    <div class="controls">
-      <button class="run" id="runBtn" onclick="runCode()" disabled>▶ Загрузка Python...</button>
-      <span id="status">Инициализация среды...</span>
+      <div class="controls">
+        <button class="run" id="runBtn" onclick="runCode()" disabled>▶ Run Code</button>
+        <span id="status">Loading Python...</span>
+      </div>
+
+      <div class="console" id="console" onclick="focusConsoleInput()"></div>
     </div>
-
-    <div class="console" id="console" onclick="focusConsoleInput()"></div>
   </div>
 
   <script src="js/main.js"></script>
